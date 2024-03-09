@@ -1,0 +1,5 @@
+dist
+inc
+debug.log
+cosign.key
+cosign.pub

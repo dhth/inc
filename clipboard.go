@@ -1,14 +1,10 @@
 package main
 
 import (
-	"golang.design/x/clipboard"
+	"github.com/atotto/clipboard"
 )
 
-func copyToClipboard(tag string) error {
-	err := clipboard.Init()
-	if err != nil {
-		return err
-	}
-	clipboard.Write(clipboard.FmtText, []byte(tag))
-	return nil
+func copyToClipboard(version string) error {
+	err := clipboard.WriteAll(version)
+	return err
 }
